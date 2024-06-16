@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteBuddy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/note.css">
+    <link rel="stylesheet" href="CSS/note-res.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>NOTEBUDDY</h1>
+            </div>
+
+            <span class="" style="font-size:30px;cursor:pointer;"  id="myBtn">&#9776;</span>
+        </nav>
+
+        <!-- reponsive navigation -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <!-- <p>Some text in the Modal..</p> -->
+              <ul>
+                
+                <!-- <li onclick="Note()"><span><i class="fa fa-book" aria-hidden="true"></i></span>Your Notes</li>
+                <li onclick="newNote()"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>New Note</li> -->
+                <li onclick="exit()"><span><i class="fa fa-sign-out" aria-hidden="true" ></i></span>Exit</li>
+              </ul>
+            </div>
+        </div>
+    </header>
+    <div id="app">
+        <div id="note-section">
+            <div id="Note-section">
+                <h2>Your Notes</h2>
+                <input type="text" id="search-input" placeholder="Search notes...">
+                <ol id="notes-list"></ol>
+            </div>
+
+            <form id="note-form">
+                <input type="text" id="note-title" placeholder="Title" required>
+                <!-- <div id="toolbar">
+                    <button type="button" onclick="document.execCommand('bold', false, '')"><b>B</b></button>
+                    <button type="button" onclick="document.execCommand('underline', false, '')"><u>U</u></button>
+                    <button type="button" onclick="document.execCommand('justifyLeft', false, '')">Left</button>
+                    <button type="button" onclick="document.execCommand('justifyCenter', false, '')">Center</button>
+                    <button type="button" onclick="document.execCommand('justifyRight', false, '')">Right</button>
+                    <input type="color" id="textColor" onchange="changeTextColor(this.value)" title="Text Color">
+                    <input type="color" id="bgColor" onchange="changeBgColor(this.value)" title="Background Color">
+                </div> -->
+                <textarea id="note-input" placeholder="Write your note here..." contenteditable="true"></textarea>
+                <button type="submit">Add Note</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="JS/nav.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const profile_page = document.getElementById("profile_page");
+        const note_form = document.getElementById("note-form");
+        const Note_section = document.getElementById("Note-section");
+
+
+       
+        function newNote(){
+            note_form.style.display= "block";
+            Note_section.style.display = "none";
+        }
+
+        function Note(){
+            Note_section.style.display = "block"
+            note_form.style.display = "none"
+        }
+
+        function exit(){
+            window.location.href = "index.html"
+        }
+       
+    </script>
+</body>
+</html>
