@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoteBuddy</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/res.css">
+
+    <style>
+        /* Import Google Font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: black;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            background: #88ABFF;
+        }
+
+        .app {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .app a {
+            text-decoration: none;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            color: blue;
+        }
+    </style>
 </head>
+
 <body>
-    <H1>Body element</H1>
+    <div class="app">
+        <h1>Welcome to NoteBuddy</h1>
+        <a href="notes.html">Continue</a>
+    </div>
 </body>
+
 </html>
